@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # TicketFlow OSS
 
 TicketFlow OSS is a lightweight open-source IT request and approval workflow API built with FastAPI and SQLite.
@@ -85,4 +85,4 @@ Open docs at `http://127.0.0.1:8000/docs`.
 MIT
 =======
 # ticketflow-oss
->>>>>>> 1571b8884d6a0670ffa12d79ac7b2206c23881da
+
