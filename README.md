@@ -48,6 +48,44 @@ Open docs at `http://127.0.0.1:8000/docs`.
 3. VPN requests require an additional security approval.
 4. After final approval, fulfillment tasks are generated for the proper assignment group.
 5. When all tasks are completed, the request closes automatically.
+## How to Run Locally
+
+1. Clone the repository:
+   git clone https://github.com/balu44445/ticketflow-oss.git
+
+2. Enter the project folder:
+   cd ticketflow-oss
+
+3. Create a virtual environment:
+   python -m venv venv
+   source venv/bin/activate
+
+4. Install dependencies:
+   pip install -r requirements.txt
+
+5. Start the app:
+   uvicorn app.main:app --reload
+
+6. Open in browser:
+   http://127.0.0.1:8000/docs
+
+## Example API flows
+
+### Create a request
+POST /requests
+
+Example:
+{
+  "request_type": "vpn",
+  "requested_by": "bala@example.com",
+  "details": "VPN access needed for remote work"
+}
+
+### Approve a request
+POST /requests/{id}/approve
+
+### View request timeline
+GET /requests/{id}
 
 ## Roadmap
 
@@ -80,6 +118,16 @@ Open docs at `http://127.0.0.1:8000/docs`.
 - add seed/demo data
 - improve docs and examples
 
+## Future Improvements
+
+- Add Docker support
+- Add PostgreSQL support
+- Add authentication and role-based access
+- Add email notifications
+- Expand API documentation
+- Add admin dashboard
+- Improve test coverage
+  
 ## License
 
 MIT
